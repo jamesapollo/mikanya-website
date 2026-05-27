@@ -41,8 +41,8 @@ export default function HomeHero() {
           style={{
             position: 'relative',
             zIndex: 2,
-            padding: '40px 36px 32px',
-            minHeight: 640,
+            padding: 'clamp(24px, 4vw, 40px) clamp(20px, 4vw, 36px) 32px',
+            minHeight: 'clamp(480px, 70vw, 640px)',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -70,15 +70,7 @@ export default function HomeHero() {
           </div>
 
           {/* Bottom strip */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(280px, 360px) minmax(0, 1fr) minmax(220px, 280px)',
-              gap: 16,
-              alignItems: 'end',
-              marginTop: 40,
-            }}
-          >
+          <div className="grid-hero-bottom">
             {/* Associate card */}
             <div className="card" style={{ padding: 18, color: 'var(--zinc-900)' }}>
               <div className="row" style={{ gap: 12 }}>

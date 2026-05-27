@@ -236,16 +236,9 @@ export default function Request() {
   return (
     <main className="page-enter">
       <section className="container" style={{ paddingTop: 8 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 2fr)',
-            gap: 48,
-            alignItems: 'start',
-          }}
-        >
+        <div className="grid-sidebar">
           {/* Left rail */}
-          <div style={{ position: 'sticky', top: 100 }}>
+          <div style={{ position: 'sticky', top: 100, alignSelf: 'start' }}>
             <span className="eyebrow-pill">
               <span className="dot" />
               Request a service
@@ -364,7 +357,7 @@ export default function Request() {
 
             {step === 2 && (
               <div className="col" style={{ gap: 20 }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div className="grid-form-pair">
                   <div className="field">
                     <label>Date service is required</label>
                     <input type="date" value={data.date} onChange={(e) => update('date', e.target.value)} />
@@ -382,7 +375,7 @@ export default function Request() {
 
                 <div className="field">
                   <label>Urgency level</label>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8 }}>
+                  <div className="grid-urgency">
                     {URGENCY.map(([id, label, sub]) => (
                       <button
                         key={id}
@@ -448,7 +441,7 @@ export default function Request() {
                     onChange={(e) => update('name', e.target.value)}
                   />
                 </div>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                <div className="grid-form-pair">
                   <div className="field">
                     <label>Phone number</label>
                     <input

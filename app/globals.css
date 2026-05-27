@@ -59,6 +59,7 @@ body {
   background: var(--paper);
   color: var(--zinc-900);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
@@ -256,6 +257,7 @@ button { font-family: inherit; cursor: pointer; }
   padding: 4px;
   border-radius: 999px;
   width: fit-content;
+  flex-wrap: wrap;
 }
 .seg button {
   border: 0;
@@ -316,4 +318,149 @@ button { font-family: inherit; cursor: pointer; }
 @media (min-width: 880px) {
   .hide-mobile { display: revert; }
   .hide-desktop { display: none; }
+}
+
+/* Tighter container on very small screens */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+}
+
+/* ===== Responsive grid classes ===== */
+
+/* Two-column equal — stacks on mobile */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Asymmetric sidebar + main — request, how-it-works */
+.grid-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .grid-sidebar { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Section header: wide headline + narrower body */
+.grid-section-header {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .grid-section-header { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* Intro block: narrow label left + wide content right */
+.grid-intro {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 3fr);
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .grid-intro { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Hero bottom strip: associate card + tabs + stat card */
+.grid-hero-bottom {
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr) minmax(220px, 280px);
+  gap: 16px;
+  align-items: end;
+  margin-top: 40px;
+}
+@media (max-width: 900px) {
+  .grid-hero-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-hero-bottom > :nth-child(2) { display: none; }
+}
+@media (max-width: 540px) {
+  .grid-hero-bottom { grid-template-columns: 1fr; }
+}
+
+/* Form inline pair: date+time, name+phone */
+.grid-form-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 540px) {
+  .grid-form-pair { grid-template-columns: 1fr; }
+}
+
+/* Urgency 3-up buttons */
+.grid-urgency {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+@media (max-width: 540px) {
+  .grid-urgency { grid-template-columns: 1fr; }
+}
+
+/* Provider hero: text panel + image panel */
+.grid-provider-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+@media (max-width: 768px) {
+  .grid-provider-hero { grid-template-columns: 1fr; }
+}
+
+/* Provider apply: dark CTA left + form right */
+.grid-apply {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+@media (max-width: 768px) {
+  .grid-apply { grid-template-columns: 1fr; }
+}
+
+/* About team card: text + member grid */
+.grid-team-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .grid-team-card { grid-template-columns: 1fr; gap: 32px; }
+}
+
+/* Services header: big heading + description */
+.grid-services-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .grid-services-header { grid-template-columns: 1fr; gap: 16px; }
+}
+
+/* About mission: heading left + prose right */
+.grid-mission {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .grid-mission { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Responsive section spacing */
+@media (max-width: 768px) {
+  .mt-section { margin-top: 60px !important; }
+  .mt-section-lg { margin-top: 72px !important; }
 }

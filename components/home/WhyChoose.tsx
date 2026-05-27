@@ -7,7 +7,7 @@ const ITEMS = [
 
 export default function WhyChoose() {
   return (
-    <section className="container" style={{ marginTop: 120 }}>
+    <section className="container mt-section" style={{ marginTop: 120 }}>
       <div style={{ maxWidth: 920 }}>
         <span className="eyebrow-pill">
           <span className="dot" />
@@ -21,7 +21,7 @@ export default function WhyChoose() {
       <div
         style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
           gap: 16,
           marginTop: 40,
         }}
@@ -38,30 +38,25 @@ export default function WhyChoose() {
         ))}
       </div>
 
-      {/* Wide image with overlay text */}
-      <div
-        style={{
-          position: 'relative',
-          marginTop: 40,
-          borderRadius: 28,
-          overflow: 'hidden',
-          minHeight: 380,
-          background: 'repeating-linear-gradient(135deg, #ece6d5 0 12px, #e2dcc8 12px 24px)',
-        }}
-      >
+      {/* Wide placeholder with text panel below (stacks on mobile) */}
+      <div style={{ marginTop: 40 }}>
         <div
           style={{
-            position: 'absolute',
-            right: 32,
-            bottom: 32,
-            maxWidth: 520,
-            background: 'rgba(255,255,255,0.96)',
+            borderRadius: 28,
+            overflow: 'hidden',
+            minHeight: 280,
+            background: 'repeating-linear-gradient(135deg, #ece6d5 0 12px, #e2dcc8 12px 24px)',
+          }}
+        />
+        <div
+          className="grid-2"
+          style={{
+            background: 'white',
             border: '1px solid rgba(0,0,0,0.05)',
             borderRadius: 20,
             padding: 24,
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr',
             gap: 24,
+            marginTop: 12,
           }}
         >
           <p style={{ fontSize: 13.5, lineHeight: 1.6, margin: 0, color: 'var(--zinc-700)' }}>

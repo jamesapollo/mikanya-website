@@ -29,16 +29,16 @@ export default function About() {
   return (
     <main className="page-enter">
       {/* Hero */}
-      <section className="container" style={{ paddingTop: 8, marginBottom: 80 }}>
+      <section className="container" style={{ paddingTop: 8, marginBottom: 60 }}>
         <div
           style={{
             position: 'relative',
             borderRadius: 32,
             overflow: 'hidden',
             background: 'linear-gradient(135deg, #2a3a52 0%, #1b2233 100%)',
-            padding: '64px 48px',
+            padding: 'clamp(32px, 6vw, 64px) clamp(24px, 5vw, 48px)',
             color: 'white',
-            minHeight: 440,
+            minHeight: 'clamp(320px, 50vw, 440px)',
           }}
         >
           <div
@@ -74,30 +74,21 @@ export default function About() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
             }}
           >
             {STATS.map(([n, l], i) => (
               <div
                 key={l}
                 style={{
-                  padding: '28px 24px',
+                  padding: '24px 20px',
                   borderRight: i < STATS.length - 1 ? '1px solid rgba(0,0,0,0.06)' : 'none',
                 }}
               >
-                <div
-                  style={{
-                    fontSize: 44,
-                    fontWeight: 600,
-                    letterSpacing: '-0.02em',
-                    lineHeight: 1,
-                  }}
-                >
+                <div style={{ fontSize: 'clamp(32px, 5vw, 44px)', fontWeight: 600, letterSpacing: '-0.02em', lineHeight: 1 }}>
                   {n}
                 </div>
-                <div className="muted" style={{ fontSize: 13, marginTop: 8 }}>
-                  {l}
-                </div>
+                <div className="muted" style={{ fontSize: 13, marginTop: 8 }}>{l}</div>
               </div>
             ))}
           </div>
@@ -105,15 +96,8 @@ export default function About() {
       </section>
 
       {/* Mission */}
-      <section className="container" style={{ marginTop: 100 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.4fr)',
-            gap: 56,
-            alignItems: 'start',
-          }}
-        >
+      <section className="container mt-section" style={{ marginTop: 100 }}>
+        <div className="grid-mission">
           <div>
             <span className="eyebrow-pill">
               <span className="dot" />
@@ -138,22 +122,15 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="container" style={{ marginTop: 100 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 24 }}>
+      <section className="container mt-section" style={{ marginTop: 100 }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
           <div>
             <span className="eyebrow-pill">
               <span className="dot" />
               What we believe
             </span>
           </div>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(0,2fr) minmax(0,1fr)',
-              gap: 32,
-              alignItems: 'end',
-            }}
-          >
+          <div className="grid-section-header">
             <h2 className="section-h">Four operating principles.</h2>
             <p className="muted" style={{ fontSize: 15, lineHeight: 1.6, margin: 0 }}>
               Everything below sits behind the experience you get when you tap &lsquo;Request a service&rsquo;. None of it is window dressing.
@@ -163,7 +140,7 @@ export default function About() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
             gap: 16,
             marginTop: 36,
           }}
@@ -182,32 +159,20 @@ export default function About() {
       </section>
 
       {/* Team */}
-      <section className="container" style={{ marginTop: 100 }}>
-        <div
-          className="card"
-          style={{
-            padding: 40,
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-            gap: 48,
-            alignItems: 'center',
-          }}
-        >
+      <section className="container mt-section" style={{ marginTop: 100 }}>
+        <div className="card grid-team-card" style={{ padding: 'clamp(24px, 4vw, 40px)' }}>
           <div>
             <span className="eyebrow-pill">
               <span className="dot" />
               The associates
             </span>
-            <h3
-              className="section-h"
-              style={{ marginTop: 20, fontSize: 'clamp(28px, 3vw, 40px)' }}
-            >
+            <h3 className="section-h" style={{ marginTop: 20, fontSize: 'clamp(28px, 3vw, 40px)' }}>
               Real people, on the other end of every request.
             </h3>
             <p className="muted" style={{ fontSize: 15, lineHeight: 1.7, marginTop: 16 }}>
               Mikanya associates are full-time employees — not gig workers, not chatbots. Each one handles a portfolio of clients and providers, and they&apos;re measured on how well the matches actually go.
             </p>
-            <div className="row" style={{ marginTop: 24, gap: 10 }}>
+            <div className="row" style={{ marginTop: 24, gap: 10, flexWrap: 'wrap' }}>
               <Link href="/contact" className="btn btn-dark">
                 Talk to an associate
                 <span className="arrow-icon" />
@@ -218,7 +183,7 @@ export default function About() {
             </div>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            {TEAM.map(([n, r, hue], i) => (
+            {TEAM.map(([n, r, hue]) => (
               <div key={n} className="card" style={{ padding: 16, background: 'var(--paper)' }}>
                 <div
                   style={{

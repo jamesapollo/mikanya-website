@@ -54,14 +54,7 @@ export default function Services() {
     <main className="page-enter">
       {/* Header */}
       <section className="container" style={{ paddingTop: 8, marginBottom: 56 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1.4fr) minmax(0, 1fr)',
-            gap: 40,
-            alignItems: 'end',
-          }}
-        >
+        <div className="grid-services-header">
           <div>
             <span className="eyebrow-pill">
               <span className="dot" />
@@ -229,13 +222,10 @@ export default function Services() {
       {/* CTA */}
       <section className="container" style={{ marginTop: 100 }}>
         <div
-          className="card"
+          className="card grid-2"
           style={{
-            padding: 48,
+            padding: 'clamp(28px, 5vw, 48px)',
             background: 'linear-gradient(180deg, #ffffff 0%, #fef9ed 100%)',
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 2fr) minmax(0, 1fr)',
-            gap: 32,
             alignItems: 'center',
           }}
         >

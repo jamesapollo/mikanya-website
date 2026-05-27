@@ -8,15 +8,8 @@ const CATEGORIES = [
 
 export default function ChooseTransport() {
   return (
-    <section className="container" style={{ marginTop: 80 }}>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(220px, 1fr) minmax(0, 3fr)',
-          gap: 48,
-          alignItems: 'start',
-        }}
-      >
+    <section className="container mt-section-lg" style={{ marginTop: 80 }}>
+      <div className="grid-intro">
         <div className="col" style={{ gap: 16 }}>
           <span className="eyebrow-pill">
             <span className="dot" />
@@ -27,14 +20,7 @@ export default function ChooseTransport() {
           </p>
         </div>
         <div>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'minmax(0, 3fr) minmax(0, 1.4fr)',
-              gap: 32,
-              alignItems: 'end',
-            }}
-          >
+          <div className="grid-section-header">
             <h2 className="section-h">We&apos;ll pick the right person for the request.</h2>
             <p className="muted" style={{ fontSize: 15, lineHeight: 1.6, margin: 0 }}>
               Tell us what you need — painting a flat, a chef for Sunday, a driver for the school run. An associate reviews each request and assigns a vetted provider you&apos;ll actually want to call back.

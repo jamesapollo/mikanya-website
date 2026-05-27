@@ -10,14 +10,8 @@ const STEPS = [
 
 export default function HowItWorks() {
   return (
-    <section className="container" style={{ marginTop: 120 }}>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'minmax(260px, 1fr) minmax(0, 2fr)',
-          gap: 48,
-        }}
-      >
+    <section className="container mt-section" style={{ marginTop: 120 }}>
+      <div className="grid-sidebar">
         <div>
           <span className="eyebrow-pill">
             <span className="dot" />

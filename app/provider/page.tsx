@@ -124,15 +124,7 @@ function ProviderApply() {
 
   return (
     <section className="container" style={{ marginTop: 100 }} id="provider-apply">
-      <div
-        className="card"
-        style={{
-          padding: 0,
-          overflow: 'hidden',
-          display: 'grid',
-          gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-        }}
-      >
+      <div className="card grid-apply" style={{ padding: 0, overflow: 'hidden' }}>
         <div style={{ padding: 40, background: 'var(--zinc-900)', color: 'white' }}>
           <span className="eyebrow-pill" style={{ background: 'rgba(255,255,255,0.95)', color: 'var(--zinc-900)' }}>
             <span className="dot" />
@@ -193,7 +185,7 @@ function ProviderApply() {
                   {SERVICE_LIST.map((s) => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              <div className="grid-form-pair">
                 <div className="field">
                   <label>Service area</label>
                   <input value={state.area} onChange={(e) => update('area', e.target.value)} placeholder="e.g. Westlands" />
@@ -234,16 +226,8 @@ export default function Provider() {
     <main className="page-enter">
       {/* Hero */}
       <section className="container" style={{ paddingTop: 8 }}>
-        <div
-          className="card"
-          style={{
-            padding: 0,
-            overflow: 'hidden',
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1.1fr) minmax(0, 1fr)',
-          }}
-        >
-          <div style={{ padding: 48 }}>
+        <div className="card grid-provider-hero" style={{ padding: 0, overflow: 'hidden' }}>
+          <div style={{ padding: 'clamp(24px, 5vw, 48px)' }}>
             <span className="eyebrow-pill">
               <span className="dot" />
               Join as a provider
@@ -275,8 +259,9 @@ export default function Provider() {
             </div>
           </div>
           <div
+            className="provider-hero-image"
             style={{
-              minHeight: 460,
+              minHeight: 'clamp(240px, 40vw, 460px)',
               background: 'repeating-linear-gradient(135deg, #ece6d5 0 12px, #e2dcc8 12px 24px)',
             }}
           />
@@ -285,14 +270,12 @@ export default function Provider() {
 
       {/* Benefits */}
       <section className="container" style={{ marginTop: 100 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 24 }}>
-          <div>
-            <span className="eyebrow-pill">
-              <span className="dot" />
-              Why join
-            </span>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,2fr) minmax(0,1fr)', gap: 32, alignItems: 'end' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+          <span className="eyebrow-pill" style={{ width: 'fit-content' }}>
+            <span className="dot" />
+            Why join
+          </span>
+          <div className="grid-section-header">
             <h2 className="section-h">Six things providers tell us they like.</h2>
             <p className="muted" style={{ fontSize: 15, lineHeight: 1.6, margin: 0 }}>
               The honest reasons established trades, drivers and home-service crews choose to work through Mikanya rather than alone.
@@ -339,14 +322,12 @@ export default function Provider() {
 
       {/* Pricing tiers */}
       <section className="container" style={{ marginTop: 100 }} id="provider-tiers">
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 24 }}>
-          <div>
-            <span className="eyebrow-pill">
-              <span className="dot" />
-              Provider pricing
-            </span>
-          </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,2fr) minmax(0,1fr)', gap: 32, alignItems: 'end' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+          <span className="eyebrow-pill" style={{ width: 'fit-content' }}>
+            <span className="dot" />
+            Provider pricing
+          </span>
+          <div className="grid-section-header">
             <h2 className="section-h">Simple monthly subscription.</h2>
             <p className="muted" style={{ fontSize: 15, lineHeight: 1.6, margin: 0 }}>
               We earn from a small commission on completed jobs — your subscription keeps your profile active and unlocks referrals.
@@ -423,13 +404,11 @@ export default function Provider() {
 
       {/* FAQ */}
       <section className="container" style={{ marginTop: 100 }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1fr)', gap: 24 }}>
-          <div>
-            <span className="eyebrow-pill">
-              <span className="dot" />
-              Provider FAQ
-            </span>
-          </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <span className="eyebrow-pill" style={{ width: 'fit-content' }}>
+            <span className="dot" />
+            Provider FAQ
+          </span>
           <h2 className="section-h">What to expect, plainly.</h2>
         </div>
         <div className="col" style={{ gap: 8, marginTop: 36, maxWidth: 880 }}>

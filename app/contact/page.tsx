@@ -75,14 +75,7 @@ export default function Contact() {
   return (
     <main className="page-enter">
       <section className="container" style={{ paddingTop: 8 }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1fr)',
-            gap: 64,
-            alignItems: 'start',
-          }}
-        >
+        <div className="grid-2" style={{ alignItems: 'start', gap: 'clamp(32px, 6vw, 64px)' }}>
           {/* Left: info */}
           <div>
             <span className="eyebrow-pill">
@@ -160,7 +153,7 @@ export default function Contact() {
                     <label>Your name</label>
                     <input value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Your name" />
                   </div>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                  <div className="grid-form-pair">
                     <div className="field">
                       <label>Email</label>
                       <input type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="you@example.com" />

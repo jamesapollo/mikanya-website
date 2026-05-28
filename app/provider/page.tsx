@@ -59,8 +59,9 @@ const TIERS = [
 const SERVICE_LIST = [
   'Painting', 'Laundry services', 'Masonry', 'Electrician services', 'Car detailing',
   'Drivers', 'Motorcycle riders', 'Food delivery', 'Crew and labour support', 'Sand delivery',
-  'Attorney services', 'Hair specialists', 'Nail specialists', 'Catering services',
-  'Chef / cook services', 'Cleaning services', 'Plumbing', 'Moving assistance',
+  'Shopping & delivery', 'Attorney services', 'Hair specialists', 'Nail specialists',
+  'Catering services', 'Chef / cook services', 'Cleaning services', 'Plumbing',
+  'Moving assistance', 'Day nanny',
 ];
 
 const FAQ = [

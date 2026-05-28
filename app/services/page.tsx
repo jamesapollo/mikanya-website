@@ -26,6 +26,7 @@ const SERVICE_GROUPS = [
       { id: 'sand', name: 'Sand delivery', tag: 'Construction supply', kes: 'from KES 6,500/tonne', desc: 'River sand, ballast and aggregate to site, same week.' },
       { id: 'moving', name: 'Moving assistance', tag: 'Households · offices', kes: 'from KES 7,500', desc: 'Pack, lift, transport, unpack. Two-three person crews with truck.' },
       { id: 'crew', name: 'Crew & labour support', tag: 'Events · loading · setup', kes: 'from KES 1,500/day', desc: 'General labour for events, builds and short-term projects.' },
+      { id: 'shopping', name: 'Shopping & delivery', tag: 'Groceries · errands · mall runs', kes: 'from KES 500', desc: 'We send a trusted runner to shop, collect or pick up on your behalf — and deliver straight to your door.' },
     ],
   },
   {
@@ -38,6 +39,7 @@ const SERVICE_GROUPS = [
       { id: 'nails', name: 'Nail specialists', tag: 'Mani-pedi · gel · acrylic', kes: 'from KES 800', desc: 'Mobile nail technicians with own kit and sterilised tools.' },
       { id: 'attorney', name: 'Attorney services', tag: 'Family · property · contracts', kes: 'from KES 5,000', desc: 'Vetted advocates for everyday legal needs — pre-screened.' },
       { id: 'detail', name: 'Car detailing', tag: 'Interior · exterior · polish', kes: 'from KES 2,500', desc: 'Mobile detailing crews. We come to your driveway with everything.' },
+      { id: 'nanny', name: 'Day nanny', tag: 'Childcare · home visits', kes: 'from KES 1,800/day', desc: 'Vetted, referenced day nannies for infants and toddlers. Background-checked and first-aid trained.' },
     ],
   },
 ];

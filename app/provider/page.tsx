@@ -176,7 +176,7 @@ function ProviderApply() {
               </div>
               <div className="field">
                 <label>Phone (WhatsApp)</label>
-                <input value={state.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+254 700 000 000" />
+                <input value={state.phone} onChange={(e) => update('phone', e.target.value)} placeholder="0714 579 360" />
               </div>
               <div className="field">
                 <label>Service you offer</label>

@@ -242,7 +242,7 @@ export default function Services() {
               Submit a custom request
               <span className="arrow-icon" />
             </Link>
-            <a href="https://wa.me/254700000000" className="btn btn-ghost btn-lg" style={{ display: 'flex' }}>
+            <a href="https://wa.me/254714579360" className="btn btn-ghost btn-lg" style={{ display: 'flex' }}>
               WhatsApp an associate
             </a>
           </div>

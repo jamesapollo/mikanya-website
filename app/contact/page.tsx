@@ -92,21 +92,21 @@ export default function Contact() {
             <div className="col" style={{ gap: 12, marginTop: 32 }}>
               <ContactMethod
                 kind="Call us"
-                value="+254 700 000 000"
-                href="tel:+254700000000"
+                value="0714 579 360"
+                href="tel:+254714579360"
                 sub="Mon–Sat · 07:00–20:00 EAT"
               />
               <ContactMethod
                 kind="WhatsApp"
-                value="+254 700 000 000"
-                href="https://wa.me/254700000000"
+                value="0714 579 360"
+                href="https://wa.me/254714579360"
                 sub="Replies within 15 minutes during hours"
                 accent
               />
               <ContactMethod
                 kind="Email"
-                value="hello@mikanya.co.ke"
-                href="mailto:hello@mikanya.co.ke"
+                value="mika@mikanyalogistics.com"
+                href="mailto:mika@mikanyalogistics.com"
                 sub="Reply within one working day"
               />
               <ContactMethod
@@ -160,7 +160,7 @@ export default function Contact() {
                     </div>
                     <div className="field">
                       <label>Phone <span style={{ color: 'var(--zinc-500)' }}>· optional</span></label>
-                      <input value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="+254 700 000 000" />
+                      <input value={form.phone} onChange={(e) => update('phone', e.target.value)} placeholder="0714 579 360" />
                     </div>
                   </div>
                   <div className="field">

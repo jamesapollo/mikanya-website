@@ -40,9 +40,9 @@ export default function Footer() {
           </div>
           <div className="col" style={{ gap: 10 }}>
             <div className="label-eyebrow">Reach us</div>
-            <a className="muted" style={{ fontSize: 13 }} href="tel:+254700000000">+254 700 000 000</a>
-            <a className="muted" style={{ fontSize: 13 }} href="https://wa.me/254700000000">WhatsApp</a>
-            <a className="muted" style={{ fontSize: 13 }} href="mailto:hello@mikanya.co.ke">hello@mikanya.co.ke</a>
+            <a className="muted" style={{ fontSize: 13 }} href="tel:+254714579360">0714 579 360</a>
+            <a className="muted" style={{ fontSize: 13 }} href="https://wa.me/254714579360">WhatsApp</a>
+            <a className="muted" style={{ fontSize: 13 }} href="mailto:mika@mikanyalogistics.com">mika@mikanyalogistics.com</a>
             <span className="muted" style={{ fontSize: 13 }}>Nairobi, Kenya</span>
           </div>
         </div>

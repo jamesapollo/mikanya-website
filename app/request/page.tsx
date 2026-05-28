@@ -445,7 +445,7 @@ export default function Request() {
                   <div className="field">
                     <label>Phone number</label>
                     <input
-                      placeholder="+254 700 000 000"
+                      placeholder="0714 579 360"
                       value={data.phone}
                       onChange={(e) => update('phone', e.target.value)}
                     />
